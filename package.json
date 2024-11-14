@@ -1,0 +1,16 @@
+{
+  "name": "api-videogame",
+  "version": "1.0.0",
+  "description": "Trabajo integrador - API de un videojuego",
+  "main": "index.ts",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Fran Borges",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
