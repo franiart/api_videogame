@@ -10,7 +10,7 @@ gestionar personajes y misiones en un videojuego.
 - Versionado de código con Git y GitHub para desarrollar
 una base sólida en el backend.
 
-## Objetivos del proyecto:
+## Objetivos del proyecto
 - Configurar y versionar proyectos con Git y GitHub.
 - Aplicar POO en TypeScript.
 - Crear y gestionar personajes y misiones en un juego.
