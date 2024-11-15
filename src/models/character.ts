@@ -15,5 +15,20 @@ class Character {
         this.inventory = [];
     }
 
+    getExperience(): number {
+        return this.experience;
+    }
+
+    getInventory():String[] {
+        return this.inventory;
+    }
+
+    setExperience(exp: number): void {
+        this.experience = exp;
+    }
+
+    setInventory(inv: []): void {
+        this.inventory = inv;
+    }
 
 }
