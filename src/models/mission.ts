@@ -1,9 +1,11 @@
+// ENUM PARA TIPOS DE MISIONES
 enum MissionType {
     Main,
     Side,
     Event,
 }
 
+// CLASE PARA MODELAR MISIONES
 class Mission {
     description: string;
     difficulty: number;
@@ -17,3 +19,5 @@ class Mission {
         this.type = type;
     }
 }
+
+export {Mission, MissionType};
