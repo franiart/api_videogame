@@ -1,9 +1,10 @@
 // SUBCLASE HECHICERO OSCURO
+import { Character } from "./character";
 class darkWizard extends Character {
     magicPower: number;
     mana: number;
 
-    constructor(name: string, health: number = 80, skills: []) {
+    constructor(name: string, health: number = 80, skills: string[]) {
         super(name, health, skills);
         this.magicPower = 30;
         this.mana = 100;
@@ -22,3 +23,5 @@ class darkWizard extends Character {
         }
     }
 }
+
+export {darkWizard}
