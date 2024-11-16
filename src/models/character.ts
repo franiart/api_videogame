@@ -45,3 +45,5 @@ class Character {
         return this.level * 100;
     }
 }
+
+export {Character}
