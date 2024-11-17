@@ -4,7 +4,7 @@
   "description": "Trabajo integrador - API de un videojuego",
   "main": "index.ts",
   "scripts": {
-    "start": "node server.js"
+    "start": "ts-node src/index.ts"
   },
   "author": "Fran Borges",
   "license": "ISC",
