@@ -10,15 +10,11 @@ createCharacter("darkWizard", "Perrijime", [], 100, []);
 createCharacter("blackHunterRabbit", "Dredgen", [], 100, []);
 createCharacter("darkCatMonster", "Yami", [], 100, []);
 
-// Listar personajes
-console.log("🎭 Personajes creados:");
-console.table(listCharacters());
-
-// Crear misiones
+// Crear misión
 const mission1 = new Mission("Derrotar al Guardián de las Ruinas", 5, 300, MissionType.Main);
 const mission2 = new Mission("Explorar la Cueva de los Ecos", 3, 200, MissionType.Side);
 
-// Jugar escenarios aleatorios
+// Ejecutar escenario
 console.log("🎲 Simulando escenarios aleatorios...");
 Promise.all([
     playRandomScenario("Morrogallo", mission1),
@@ -32,3 +28,4 @@ Promise.all([
 
 // Fin del juego
 console.log("👾 ¡Gracias por jugar a Monstruópolis! 👾");
+
