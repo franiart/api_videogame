@@ -1,6 +1,6 @@
 import { createCharacter, listCharacters } from "./controllers/characterController";
 import { Mission, MissionType } from "./models/mission";
-import { playRandomScenario } from "./controllers/gameLogic";
+import { playScenario } from "./controllers/gameLogic";
 
 console.log("👾 ¡Bienvenido a Monstruópolis! 👾");
 
@@ -17,8 +17,10 @@ const mission2 = new Mission("Explorar la Cueva de los Ecos", 3, 200, MissionTyp
 // Ejecutar escenario
 console.log("🎲 Simulando escenarios aleatorios...");
 Promise.all([
-    playRandomScenario("Morrogallo", mission1),
-    playRandomScenario("Perrijime", mission2),
+    playScenario(listCharacters()[0], mission1),
+    playScenario(listCharacters()[1], mission2),
+    playScenario(listCharacters()[2], mission1),
+    playScenario(listCharacters()[3], mission2),
     ]).then(() => {
     console.log("🎮 ¡Escenarios completados!");
     console.table(listCharacters());
