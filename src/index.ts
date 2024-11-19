@@ -5,10 +5,10 @@ import { playRandomScenario } from "./controllers/gameLogic";
 console.log("👾 ¡Bienvenido a Monstruópolis! 👾");
 
 // Crear personajes
-createCharacter("spectralWarrior", "Morrogallo", [], 100);
-createCharacter("darkWizard", "Perrijime", [], 100);
-createCharacter("blackHunterRabbit", "Dredgen", [], 100);
-createCharacter("darkCatMonster", "Yami", [], 100);
+createCharacter("spectralWarrior", "Morrogallo", [], 100, []);
+createCharacter("darkWizard", "Perrijime", [], 100, []);
+createCharacter("blackHunterRabbit", "Dredgen", [], 100, []);
+createCharacter("darkCatMonster", "Yami", [], 100, []);
 
 // Listar personajes
 console.log("🎭 Personajes creados:");
