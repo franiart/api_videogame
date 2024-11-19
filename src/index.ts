@@ -1,44 +1,34 @@
 import { createCharacter, listCharacters } from "./controllers/characterController";
 import { Mission, MissionType } from "./models/mission";
-import { triggerRandomEvent } from "./services/eventService";
+import { playRandomScenario } from "./controllers/gameLogic";
 
-// Bienvenida al juego
 console.log("👾 ¡Bienvenido a Monstruópolis! 👾");
 
 // Crear personajes
-const spectralWarrior = createCharacter("spectralWarrior", "Morrogallo", [], 50);
-const darkWizard = createCharacter("darkWizard", "Perrijime", [], 50);
+createCharacter("spectralWarrior", "Morrogallo", [], 100);
+createCharacter("darkWizard", "Perrijime", [], 100);
+createCharacter("blackHunterRabbit", "Dredgen", [], 100);
+createCharacter("darkCatMonster", "Yami", [], 100);
 
-// Crear misiones
-const mission1 = new Mission("Explorar el Bosque de los Recuerdos", 1, 100, MissionType.Side);
-const mission2 = new Mission("Explorar el Cementerio de Almas", 2, 200, MissionType.Main);
-
-// Mostrar personajes actuales
+// Listar personajes
 console.log("🎭 Personajes creados:");
 console.table(listCharacters());
 
-// Asignar misiones
-console.log(`📜 Asignando misión "${mission1.description}" a ${spectralWarrior.name}...`);
-spectralWarrior.inventory.push(mission1.description);
+// Crear misiones
+const mission1 = new Mission("Derrotar al Guardián de las Ruinas", 5, 300, MissionType.Main);
+const mission2 = new Mission("Explorar la Cueva de los Ecos", 3, 200, MissionType.Side);
 
-console.log(`📜 Asignando misión "${mission2.description}" a ${darkWizard.name}...`);
-darkWizard.inventory.push(mission2.description);
-
-// Simulación de eventos aleatorios
-console.log("🎲 Simulando eventos aleatorios...");
+// Jugar escenarios aleatorios
+console.log("🎲 Simulando escenarios aleatorios...");
 Promise.all([
-    triggerRandomEvent(spectralWarrior),
-    triggerRandomEvent(darkWizard),
-
-]).then(() => {
-    console.log("🎮 Eventos finalizados.");
-
-    // Mostrar resultados finales
-    console.log("📦 Estado final de los personajes:");
+    playRandomScenario("Morrogallo", mission1),
+    playRandomScenario("Perrijime", mission2),
+    ]).then(() => {
+    console.log("🎮 ¡Escenarios completados!");
     console.table(listCharacters());
     }).catch(err => {
-    console.error("⚠️ Error durante los eventos:", err);
-    });
+    console.error("⚠️ Error durante los escenarios:", err);
+});
 
 // Fin del juego
 console.log("👾 ¡Gracias por jugar a Monstruópolis! 👾");
