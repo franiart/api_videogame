@@ -1,26 +1,20 @@
-// SUBCLASE HECHICERO OSCURO
+// SUBCLASE CONEJO NEGRO CAZADOR
 import { Character } from "./character";
 class blackHunterRabbit extends Character {
-    magicPower: number;
-    mana: number;
+    agility: number;
 
-    constructor(name: string, health: number = 80, skills: string[]) {
+    constructor(name: string, health: number = 120, skills: string[], weakness: string[]) {
         super(name, health, skills);
-        this.magicPower = 30;
-        this.mana = 100;
-        this.skills = ['night vision', 'levitation', 'invocation'];
+        this.agility = 25;
+        this.skills = [];
+        this.weakness = [];
     }
 
     /**
-     * HECHIZO PODEROSO SI POSEE SUFICIENTE MANÁ
+     * ATAQUE CON BONUS DE AGILIDAD
      */
-    castSpell(): void {
-        if (this.mana >= 20) {
-            this.mana -= 20;
-            console.log(`${this.name} lanza un hechizo poderoso.`);
-        } else {
-            console.log(`${this.name} no tiene suficiente maná.`);
-        }
+    quickAttack(): void {
+        console.log(`${this.name} realiza un ataque rápido con bonus de ${this.agility}!`);
     }
 }
 

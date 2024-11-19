@@ -3,12 +3,13 @@ import { Character } from "./character";
 class darkCatMonster extends Character {
     magicPower: number;
     mana: number;
-
-    constructor(name: string, health: number = 80, skills: string[]) {
+    
+    constructor(name: string, health: number = 80, skills: string[], weakness: string[]) {
         super(name, health, skills);
         this.magicPower = 30;
         this.mana = 100;
         this.skills = ['night vision', 'levitation', 'invocation'];
+        this.weakness = ['sea']
     }
 
     /**
