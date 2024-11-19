@@ -1,4 +1,6 @@
+import { blackHunterRabbit } from "../models/blackHunterRabbit";
 import { Character } from "../models/character";
+import { darkCatMonster } from "../models/darkCatMonster";
 import { darkWizard } from "../models/darkWizard";
 import { spectralWarrior } from "../models/spectralWarrior";
 
@@ -9,9 +11,10 @@ const characters: Character[] = [];
  * @param type TIPO DE PERSONAJE (spectralWarrior o darkWizard).
  * @param name NOMBRE DEL PERSONAJE
  * @param skills HABILIDADES DEL PERSONAJE
+ * @param weakness DEBILIDADES DEL PERSONAJE
  * @returns EL PERSONAJE CREADO
  */
-function createCharacter(type: string, name: string, skills: [], health: number): Character {
+function createCharacter(type: string, name: string, skills: string[], health: number, weakness: string[]): Character {
     let character: Character;
 
 switch (type) {
@@ -20,6 +23,12 @@ switch (type) {
         break;
     case "darkWizard":
         character = new darkWizard(name, health, skills);
+        break;
+    case "darkCatMonster":
+        character = new darkCatMonster(name, health, skills, weakness);
+        break;
+    case "blackHunterRabbit":
+        character = new blackHunterRabbit(name, health, skills, weakness);
         break;
     default:
         throw new Error("Tipo de personaje no válido.");
