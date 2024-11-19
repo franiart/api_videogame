@@ -1,14 +1,14 @@
 import { Scenario, scenarios } from "../models/scenario";
 
 /**
- * Lista todos los escenarios disponibles.
+ * LISTADO DE TODOS LOS ESCENARIOS
  */
 function listScenarios(): Scenario[] {
     return scenarios;
 }
 
 /**
- * Selecciona un escenario aleatorio.
+ * SELECCIÓN DE ESCENARIO ALEATORIO
  */
 function getRandomScenario(): Scenario {
     const randomIndex = Math.floor(Math.random() * scenarios.length);
