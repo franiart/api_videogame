@@ -8,14 +8,14 @@ class Character {
     inventory: string[];
     weakness: string[];
     
-    constructor(name: string, health: number, skills: string[], weakness: string[]) {
+    constructor(name: string, health: number) {
         this.name = name;
         this.level = 1;
         this.health = health;
         this.experience = 0;
-        this.skills = skills;
+        this.skills = [];
         this.inventory = [];
-        this.weakness = weakness
+        this.weakness = []
     }
 
     /**
