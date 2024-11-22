@@ -4,8 +4,8 @@ class darkWizard extends Character {
     magicPower: number;
     mana: number;
 
-    constructor(name: string, health: number = 80, skills: string[], weakness: string[]) {
-        super(name, health, skills, weakness);
+    constructor(name: string, health: number = 80) {
+        super(name, health);
         this.magicPower = 30;
         this.mana = 100;
         this.skills = ['night vision', 'levitation', 'invocation'];

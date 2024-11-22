@@ -3,8 +3,8 @@ import { Character } from "./character";
 class blackHunterRabbit extends Character {
     agility: number;
 
-    constructor(name: string, health: number = 120, skills: string[], weakness: string[]) {
-        super(name, health, skills, weakness);
+    constructor(name: string, health: number = 120) {
+        super(name, health);
         this.agility = 25;
         this.skills = ['speed', 'stealth'];
         this.weakness = ['reduced agility in wet terrain'];
