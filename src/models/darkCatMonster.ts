@@ -5,23 +5,25 @@ class darkCatMonster extends Character {
     mana: number;
     
     constructor(name: string, health: number = 80, skills: string[], weakness: string[]) {
-        super(name, health, skills);
+        super(name, health, skills, weakness);
         this.magicPower = 30;
         this.mana = 100;
-        this.skills = ['night vision', 'levitation', 'invocation'];
-        this.weakness = ['sea']
+        this.skills = ['night vision', 'night silence', 'black magic']
+        this.weakness = ['sea', 'loses effectiveness during daytime']
     }
 
     /**
-     * HECHIZO PODEROSO SI POSEE SUFICIENTE MANÁ
-     */
-    castSpell(): void {
-        if (this.mana >= 20) {
-            this.mana -= 20;
-            console.log(`${this.name} lanza un hechizo poderoso.`);
-        } else {
-            console.log(`${this.name} no tiene suficiente maná.`);
-        }
+    * SHADOW POUNCE: REALIZA UN SALTO VELOZ HACIA EL ENEMIGO CAUSANDO DAÑO CRÍTICO
+    */
+    shadowPounce(): void {
+        console.log(`${this.name} realiza un salto de sombras causando daño crítico.`);
+    }
+
+    /**
+    * Habilidad: Eclipse Veil.
+    */
+    eclipseVeil(): void {
+        console.log(`${this.name} crea un escudo de sombras y reduce el daño recibido.`);
     }
 }
 
