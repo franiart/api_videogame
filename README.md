@@ -90,7 +90,7 @@ Durante las misiones, pueden ocurrir eventos inesperados que impactarán a tus p
 **Debilidades:**
 - Lento contra enemigos ágiles.
 
-1. darkWizard (Perrijime)
+2. darkWizard (Perrijime)
    
 **Habilidades:**
 - Lanza Hechizos: Usa maná para infligir daño mágico.
@@ -98,7 +98,7 @@ Durante las misiones, pueden ocurrir eventos inesperados que impactarán a tus p
 **Debilidades:**
 - Poca defensa física.
 
-1. darkCatMonster (Yami)
+3. darkCatMonster (Yami)
 
 **Habilidades:**
 - Shadow Pounce: Salta hacia el enemigo causando daño crítico.
@@ -107,7 +107,7 @@ Durante las misiones, pueden ocurrir eventos inesperados que impactarán a tus p
 **Debilidades:**
 - Vulnerable a ataques de luz y al océano.
 
-1. BlackHunterRabbit (Dredgen)
+4. BlackHunterRabbit (Dredgen)
 
 **Habilidades:**
 - Piercing Shot: Dispara un proyectil que ignora armadura.
