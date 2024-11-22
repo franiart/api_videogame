@@ -5,10 +5,10 @@ import { playScenario } from "./controllers/gameLogic";
 console.log("👾 ¡Bienvenido a Monstruópolis! 👾");
 
 // Crear personajes
-createCharacter("spectralWarrior", "Morrogallo", [], 100, []);
-createCharacter("darkWizard", "Perrijime", [], 100, []);
-createCharacter("blackHunterRabbit", "Dredgen", [], 100, []);
-createCharacter("darkCatMonster", "Yami", [], 100, []);
+createCharacter("spectralWarrior", "Morrogallo", 100);
+createCharacter("darkWizard", "Perrijime", 90);
+createCharacter("blackHunterRabbit", "Dredgen", 50);
+createCharacter("darkCatMonster", "Yami", 80);
 
 // Crear misión
 const mission1 = new Mission("Derrotar al Guardián de las Ruinas", 5, 300, MissionType.Main);
