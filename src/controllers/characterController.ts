@@ -14,21 +14,21 @@ const characters: Character[] = [];
  * @param weakness DEBILIDADES DEL PERSONAJE
  * @returns EL PERSONAJE CREADO
  */
-function createCharacter(type: string, name: string, skills: string[], health: number, weakness: string[]): Character {
+function createCharacter(type: string, name: string, health: number): Character {
     let character: Character;
 
 switch (type) {
     case "spectralWarrior":
-        character = new spectralWarrior(name, health, skills);
+        character = new spectralWarrior(name, health);
         break;
     case "darkWizard":
-        character = new darkWizard(name, health, skills);
+        character = new darkWizard(name, health);
         break;
     case "darkCatMonster":
-        character = new darkCatMonster(name, health, skills, weakness);
+        character = new darkCatMonster(name, health);
         break;
     case "blackHunterRabbit":
-        character = new blackHunterRabbit(name, health, skills, weakness);
+        character = new blackHunterRabbit(name, health);
         break;
     default:
         throw new Error("Tipo de personaje no válido.");
