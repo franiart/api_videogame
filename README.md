@@ -52,13 +52,16 @@ Tu objetivo es desarrollar tus personajes, completar misiones y sobrevivir a los
 ## **Instalación**
 1. Clona el repositorio:
    git clone https://github.com/franiart/api_videogame.git
+   
    cd api_videogame
 
 2. Instala las dependencias:
-    npm install
+   
+   npm install
 
 3. Compila y ejecuta el proyecto:
-    npm start
+   
+   npm start
 
 ---
 
@@ -80,28 +83,36 @@ Durante las misiones, pueden ocurrir eventos inesperados que impactarán a tus p
 
 ## Personajes Disponibles
 1. spectralWarrior (Morrogallo)
+   
 **Habilidades:**
 - Ataque Especial: Realiza un golpe poderoso.
+
 **Debilidades:**
 - Lento contra enemigos ágiles.
 
-2. darkWizard (Perrijime)
+1. darkWizard (Perrijime)
+   
 **Habilidades:**
 - Lanza Hechizos: Usa maná para infligir daño mágico.
+  
 **Debilidades:**
 - Poca defensa física.
 
-3. darkCatMonster (Yami)
+1. darkCatMonster (Yami)
+
 **Habilidades:**
 - Shadow Pounce: Salta hacia el enemigo causando daño crítico.
 - Eclipse Veil: Reduce el daño recibido durante 2 turnos.
+
 **Debilidades:**
 - Vulnerable a ataques de luz y al océano.
 
-4. BlackHunterRabbit (Dredgen)
+1. BlackHunterRabbit (Dredgen)
+
 **Habilidades:**
 - Piercing Shot: Dispara un proyectil que ignora armadura.
 - Quick Escape: Aumenta evasión y recupera salud.
+
 **Debilidades:**
 - Reducción de agilidad en terrenos húmedos.
 
@@ -146,6 +157,7 @@ Aumenta todas las estadísticas temporalmente.
 ---
 
 ## Código de ejemplo
+```
 import { createCharacter, listCharacters } from "./controllers/characterController";
 import { Mission, MissionType } from "./models/Mission";
 import { playScenario } from "./controllers/gameLogic";
@@ -158,3 +170,4 @@ const mission = new Mission("Derrotar al Guardián de las Ruinas", 5, 300, Missi
 
 // Ejecutar escenario
 playScenario(listCharacters()[0], mission);
+```
